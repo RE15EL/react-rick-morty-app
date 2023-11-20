@@ -6,6 +6,7 @@ import Episode from '../pages/Episode';
 import CharacterDetail from "../pages/CharacterDetail";
 import LocationDetail from "../pages/LocationDetail";
 import NotFound from "../pages/NotFound";
+import EpisodeDetail from "../pages/EpisodeDetail";
 
 
 export default function Router() {
@@ -18,6 +19,7 @@ export default function Router() {
             <Route path="location" element={<Location/>}/>
             <Route path="location/:id" element={<LocationDetail/>}/>
             <Route path="episode" element={<Episode/>}/>
+            <Route path="episode/:id" element={<EpisodeDetail/>}/>
         </Route>
         <Route path="*" element={<NotFound/>}/>
     </Routes>
