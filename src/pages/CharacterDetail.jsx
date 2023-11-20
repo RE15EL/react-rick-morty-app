@@ -26,13 +26,13 @@ export default function CharacterDetail() {
                         <li>Created:  {data?.created}</li>
                         <li>
                             Origin:  
-                            <span aria-roledescription="link" role="link" onClick={()=>getId(data?.origin?.url)} className="hover:underline">
+                            <span aria-roledescription="link" role="link" onClick={()=>getId(data?.origin?.url)} className="hover:underline hover:cursor-pointer">
                                 {' '+ data?.origin?.name}
                             </span>
                         </li>
                         <li>
                             Location:  
-                            <span aria-roledescription="link" role="link" onClick={()=>getId(data?.location?.url)} className="hover:underline">
+                            <span aria-roledescription="link" role="link" onClick={()=>getId(data?.location?.url)} className="hover:underline hover:cursor-pointer">
                                 {' '+ data?.location?.name}
                             </span>
                         </li>
