@@ -7,4 +7,3 @@ export default function NotFound() {
     </div>
   )
 }
-// bg-[url('./assets/404.png')] bg-no-repeat bg-center
