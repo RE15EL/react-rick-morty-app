@@ -11,7 +11,8 @@ export default function Episode() {
         { data 
             ?  data.results.map((episode)=>(
                 <Link key={episode.id} to={`${episode.id}`}> 
-                  <li  className="hover:bg-gray-200 hover:shadow-md transition-all hover:font-bold p-2 rounded-[0.5rem]">
+                  <li  className="text-gray-800 dark:text-gray-200 bg-gray-200 bg-gradient-to-r hover:bg-gradient-to-l from-gray-300 to-gray-100 border
+                           dark:from-gray-800 dark:to-gray-600 hover:shadow-md transition-all hover:font-bold p-2 rounded-[0.5rem]">
                     {episode.name}
                   </li>
                 </Link>
