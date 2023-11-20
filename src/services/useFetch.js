@@ -2,18 +2,25 @@ import { useEffect, useState } from "react"
 import { base_url } from "../shared/constants"
 
 
-export const useFetch = ( url, options) => {
+export const useFetch = ( url) => {
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState(null);
+    const [error, setError] = useState({});
 
     useEffect(()=>{
         setIsLoading(true);
-        fetch(`${base_url}/${url}`, options)
+        const controller = new AbortController();
+        const signal = controller.signal;
+
+        fetch(`${base_url}/${url}`, {signal})
             .then(res => res.json())
             .then(data => setData(data))
-            .catch((error)=>console.error(error))
+            .catch((err)=>{
+                setError({...error, message: err.message});
+                console.error(`Error: ${error.message}`)
+            })
             .finally(()=> setIsLoading(false))
     },[])
 
-    return { isLoading, data };
+    return { isLoading, data, error };
 }
