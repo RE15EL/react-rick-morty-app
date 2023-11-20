@@ -23,7 +23,7 @@ export default function Footer() {
         </section>
         <section className='text-center text-dark p-3 w-full'>
             ©{new Date().getFullYear()} Copyright:
-            <a className='text-dark' href='https://mdbootstrap.com/'> MDBootstrap.com </a>
+            <a className='text-dark' href='https://github.com/RE15EL'> Reisel Valle Rojas </a>
         </section>              
     </footer>
   )
