@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
         <nav>
             <ul className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-2 p-2
-                        dark:text-gray-300 text-xl" >
+                        dark:text-gray-300 text-[1.15rem]" >
                 <li >
                     <NavLink className={applyClassName} to="/character">Character</NavLink>
                 </li>
