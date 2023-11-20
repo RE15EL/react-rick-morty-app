@@ -8,7 +8,7 @@ export function Header({darkTheme, setDarkTheme}) {
             <h1 className="dark:text-gray-300 text-bold font-bold text-2xl" >Rick & Morty App</h1>
             
             <Navbar/>
-
+            
             <button type="button" 
                     className="p-1 border shadow-md hover:shadow-lg border-gray-300 dark:border-gray-700 rounded-full"
                     onClick={()=>setDarkTheme(!darkTheme)}>
